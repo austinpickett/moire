@@ -3,7 +3,7 @@ import * as p5 from 'p5'
 let s = (sk) => {
   sk.setup = () => {
     let gfx = sk.createGraphics(window.innerWidth, window.innerHeight);
-    let gfx2 = sk.createGraphics(window.innerWidth, window.innerHeight);;
+    let gfx2 = sk.createGraphics(window.innerWidth, window.innerHeight);
 
     sk.createCanvas(window.innerWidth, window.innerHeight);
     sk.angleMode(sk.DEGREES);
@@ -14,16 +14,15 @@ let s = (sk) => {
     gfx.stroke(200);
     gfx.strokeWeight(3);
     gfx.noFill()
-
-    gfx2.stroke(200);
-    gfx2.strokeWeight(3);
-    gfx2.noFill()
     for (let i = 0; i < 1000; i += 10) {
       gfx.stroke('red')
       gfx.strokeWeight(2)
       gfx.ellipse(window.innerWidth / 2, window.innerHeight / 2, i - 500, i - 500)
     }
 
+    gfx2.stroke(200);
+    gfx2.strokeWeight(3);
+    gfx2.noFill()
     for (let i = 0; i < 1000; i += 10) {
       gfx2.stroke('blue')
       gfx2.strokeWeight(2)
